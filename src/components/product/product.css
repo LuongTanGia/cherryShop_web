@@ -1,0 +1,194 @@
+.bodyProduct {
+    margin-top: 130px;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    /* min-height: 100vh; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    border-bottom: 2px solid #ccc;
+    margin-bottom: 130px;
+}
+.slider {
+    width: 80vw;
+    overflow-x: scroll;
+    padding-top: 51px;
+    box-sizing: border-box;
+    /* backdrop-filter: blur(10px); */
+    background-color: #fff3;
+    border-radius: 20px;
+}
+.btnMoveLeft,
+.btnMoveRight {
+    position: absolute;
+    /* width: 52px;
+    height: 52px;
+    border-radius: 100%;
+    background: #fff;
+    border: 1px solid #636060; */
+    top: 60%;
+}
+.btnMoveLeft {
+    left: -35px;
+}
+.btnMoveRight {
+    right: -25px;
+}
+.slider::-webkit-scrollbar {
+    width: 20px;
+}
+.slider .form {
+    width: max-content;
+    --left: 0;
+    transform: translateX(var(--left));
+    /* position: relative; */
+}
+.slider .desc {
+    /* margin-left: 429px; */
+    color: #141313;
+    text-align: center;
+    /* font-family: Satoshi; */
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px; /* 100% */
+}
+.title {
+    /* margin-left: 407px; */
+    width: 405px;
+    color: #141313;
+    text-align: center;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: 45px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 54px; /* 108% */
+    margin-bottom: 20px;
+}
+.title button {
+    border-radius: 20px;
+    border: none;
+    font-family: system-ui;
+}
+.slider .form .item {
+    width: 270px;
+    height: 452px;
+    display: inline-block;
+    margin-right: 40px;
+    transform: perspective(10px);
+    transform-style: preserve-3d;
+}
+.slider .form .item .content {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.5s;
+}
+.slider .form .item .content .des {
+    width: 270px;
+    height: 452px;
+    position: absolute;
+    bottom: -400px;
+    left: 0;
+    backdrop-filter: blur(10px);
+    color: #141313;
+    font-weight: bold;
+    font-family: monospace;
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    flex-direction: column;
+    padding: 10px;
+    box-sizing: border-box;
+    transition: all 1s ease-in-out;
+}
+.slider .form .item .content .des:hover {
+    bottom: 0px;
+}
+.slider .form .item .content .des button {
+    width: 250px;
+    height: 42px;
+    border: 1px solid #141313;
+    background: #141313;
+    transition: all 1s ease-in-out;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 0 20px;
+    color: #fff;
+}
+.slider .form .item .content .des button span {
+    text-align: right;
+    /* font-family: Satoshi; */
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 16px; /* 100% */
+    letter-spacing: 0.64px;
+}
+.slider .form .item .content .des button:hover {
+    width: 250px;
+    height: 42px;
+    border: 1px solid #141313;
+    background: #ffe484;
+    color: #141313;
+}
+.slider .form .item .content .des .des_category {
+    color: #141313;
+    /* font-family: Satoshi; */
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 14px; /* 100% */
+    position: relative;
+    margin-bottom: 8px;
+}
+.slider .form .item .content .des .des_category::after {
+    /* margin-top: 10px; */
+    content: "";
+    background: #141313;
+    width: 100px;
+    height: 2px;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    border-radius: 99px;
+}
+
+.slider .form .item .content .des .des_name {
+    width: 232px;
+    color: #141313;
+    /* font-family: Libertinus Serif; */
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 24px; /* 120% */
+    margin-bottom: 13px;
+}
+
+.slider .form .item .content .des .des_count {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 24px;
+}
+.slider .form .item .content .des img {
+    width: 64.8px;
+    height: 12px;
+}
+.slider .form.left .item .content {
+    transform: rotateY(-1deg) scale(0.8);
+}
+.slider .form.right .item .content {
+    transform: rotateY(1deg) scale(0.8);
+}
+.slider .form .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

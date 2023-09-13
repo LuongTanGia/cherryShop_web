@@ -1,0 +1,74 @@
+.header {
+    width: 1380px;
+    height: 60px;
+    border: 1px solid var(--black);
+    background: var(--white);
+    display: flex;
+    position: fixed;
+    top: 14px;
+    margin-left: 30px;
+    z-index: 100000;
+}
+.header_left {
+    width: 1320px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-right: 1px solid var(--black);
+}
+.header_left .header_menu-main {
+    margin-left: 50px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 30px;
+}
+.header_left .action {
+    position: relative;
+}
+.header_left .action::after {
+    content: "";
+    width: 48px;
+    height: 1px;
+    position: absolute;
+    background: var(--black);
+    left: 0px;
+    border-radius: 999999px;
+    bottom: -2px;
+}
+.header_left .header_logo {
+    margin-left: 190px;
+}
+.header_left .header_search {
+    margin-left: 315px;
+    width: 238px;
+    height: 38px;
+    border-bottom: 1px solid var(--black);
+    position: relative;
+    overflow: hidden;
+}
+.header_left .header_search .header_input {
+    margin-left: 12px;
+    width: 238px;
+    height: 38px;
+}
+.header_left .header_search .header_input input {
+    width: 208px;
+    height: 38px;
+    border: none;
+    outline: none;
+}
+.header_left .header_search .header_input .searchIcon {
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    top: 10px;
+    right: 0;
+}
+.header_right {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
